@@ -5,10 +5,11 @@
             [hiccup.core :as hc]
             [cheshire.core :as json]
             [hostel.sites :as hs]
+            [hostel.views :as hv]
             [compojure.route :as route]))
 
 (defn index  [{params :params}]
-  {:body  "Hello"
+  {:body  (hv/html-face {:sites (hs/read-sites)})
    :status 200})
 
 (defn list-apps [req]
@@ -40,7 +41,7 @@
 
 
 (defroutes app-routes
-  (GET "/"  [] #'list-apps)
+  (GET "/"  [] #'index)
   (GET "/app"  [] #'list-apps)
   (POST "/app"  [] #'upload-app)
   (DELETE "/post/:app"  [] #'delete-app)

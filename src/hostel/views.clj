@@ -14,7 +14,7 @@
       [:div.wrap content]
       (include-js "/face.js")]]))
 
-(defn html-face [{ps :plugins}]
+(defn html-face [{ps :sites}]
   (html-layout
     [:div
      [:h1.top

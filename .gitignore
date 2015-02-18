@@ -10,5 +10,7 @@ pom.xml.asc
 .hgignore
 .hg/
 resources/public/*
+!resources/public/*.css
+!resources/public/*.ttf
 !resources/public/.gitkeep
 *sw?
