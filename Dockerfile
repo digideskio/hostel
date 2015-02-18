@@ -24,8 +24,9 @@ RUN sudo apt-get -qqy install nginx
 COPY . /home/hostel/service
 RUN sudo chown -R hostel:hostel /home/hostel/service
 RUN cd ~/service && lein deps
+RUN cd ~/service && lein compile
 
 EXPOSE 80
 EXPOSE 8080
 
-CMD cd ~/service && lein repl
+CMD cd ~/service && lein run

@@ -1,5 +1,5 @@
 (ns user
   (:require [hostel.core :as hc]))
 
-(hc/start)
+;;(hc/start)
 ;;(hc/stop)
