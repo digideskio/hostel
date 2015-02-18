@@ -3,6 +3,9 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :profiles {:dev {:source-paths ["dev"]
+                   :dependencies [[org.clojure/tools.namespace "0.2.9"]]
+                   :plugins [[lein-kibit "0.0.8"]] }}
   :dependencies [[compojure "1.3.1"]
                  [hiccup "1.0.5"]
                  [http-kit "2.1.19"]

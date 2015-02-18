@@ -59,7 +59,8 @@
 
 (defn start  []
   (def stop
-    (ohs/run-server #'app  {:port 8080})))
+    (ohs/run-server #'app  {:port 8080}))
+  (println "Server started on port 8080"))
 
 (comment
   (require '[vinyasa.pull :as vp])

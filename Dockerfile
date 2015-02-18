@@ -23,9 +23,7 @@ RUN sudo apt-get -qqy install nginx
 
 COPY . /home/hostel/service
 RUN sudo chown -R hostel:hostel /home/hostel/service
-RUN mv ~/hostelface/dist ~/service/resources/public/hostelface
 RUN cd ~/service && lein deps
-RUN cd ~/service && cp dev/production.clj dev/user.clj
 
 EXPOSE 80
 EXPOSE 8080
