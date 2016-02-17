@@ -1,3 +1,5 @@
+# [DEPRECATED] No longer being actively developed
+
 # hostel
 
 Simple hosting for SPA
